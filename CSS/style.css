@@ -1,0 +1,215 @@
+body {
+  background-color: #000000;
+  /*margin-top: 60px; margen arriba
+  margin-left: 200px; margen izquierda
+  margin-bottom: 0px; margen abajo
+  margin-right: 200px; margen derecha*/
+  margin: 60px 200px 0px 200px;
+  font-family: "Open Sans", sans-serif; /*Margen de google  fonts primero se agraga en index*/
+}
+
+/*.logo {
+    Cuando colocamos 0 auto, hay dos caracteristicas, la primera se le dara a la parte 
+    de arriba y la de abajo(En este caso es 0) y el segundo le da las amrgenes a los lados 
+    izquierdo y derecho (En este caso automatico)
+    margin: 0 auto; */
+
+.logoimagen {
+  width: 200px;
+  display: block; /*como se visualiza el elemnto, en bloque o en linea*/
+  margin: 0 auto;
+}
+
+nav {
+  padding: 20px 0px;
+  text-align: center;
+}
+.barradenavegacion {
+  list-style: none; /*Quita la viñetas de los elementos*/
+  display: inline-flex; /*Hace que los hijos o los elementos se vuelvan flexible con el*/
+  margin: 0; /*Se coloca en caso de que el margin y el padding de altere */
+  padding: 0;
+}
+.navegacion {
+  display: inline-block;
+  padding: 10px 60px 10px 60px;
+}
+
+/*El hover es un evento(Cuando el usuario interactua con el elemento), es decir que al pasar el 
+mause por encima del elemento se le asigna para que se activen ciertas propiedades que estan dentro de las llaves*/
+.navegacion:hover {
+  background-color: #fdbca385;
+}
+
+.navegacion a {
+  color: aliceblue; /*Da color a los los elemenos de navegacion con la caracteristica "a"*/
+  text-decoration: none; /*Elimina la linea de abajo del hipervinculo*/
+  font-weight: 800; /*Coloca negrita o grosor al texto*/
+}
+/* section parallax */
+/* un selector simple de id/clases */
+.parallax {
+  /* "../" se utiliza para viajar entre carpetas, en esta caso lo usamos porque no busca las imagenes normal */
+  background-image: url(../imagenes/parallax1.jpg);
+  /* Se utiliza para especificar el tamaño de la imagen de fondo */
+  /*  */
+  background-size: contain;
+  /* min_height es la altura minima del area de contenido de una elemento y se usa para evitar que la 
+altura de CCS sea menor que el valor especificado en la propiedad altura */
+  min-height: 600px;
+  /* Esta propiedad hace que mi imagne de fondo no aparezca en mosaico, no se repita  */
+  background-repeat: no-repeat;
+  background-position: center;
+  /* esta propiedad establece si una imagen de fondo se desplaza con el resto de la pagina o se queda fija */
+  background-attachment: fixed;
+  /* display:flex ayuda a que los elementos tengan un comportamiento flexible, es decir que sea adaptable
+  y exista un control de diseño en diferentes dispositivos */
+  display: flex;
+  /*aling_intem:center es una propiedad de flexbox que alinea los elemtos de manera vertical */
+  align-items: center;
+  /* Es una propiedad de flexbox que alinia el contenido de manera horizontal */
+  justify-content: center;
+}
+
+/* selector descendente: Coincide con todos los elementos que son descendientes de un
+elemento especificado */
+.tituloparallax h2 {
+  /* La unidad cm es una unidad adsoluta, es decir son un tipo de medida fija que no cambia,
+no depende de factores externos, son poco adecuadas para la web, ya que no tienen diferentes 
+resoluciones  */
+  font-size: 1.5cm;
+  color: whitesmoke;
+  /* negrita al texto 700 de grosor */
+  font-weight: 700;
+  text-align: center;
+  /* reset de margen */
+  margin: 0;
+}
+.parrafoparallax {
+  display: flex;
+  justify-content: center;
+  /* border propiedad de box-model, solid solido y el otro el color */
+  border: 2px solid whitesmoke;
+  /*  */
+}
+
+/* selector de pseudoClase, hover es un evento */
+.parrafoparallax:hover {
+  background-color: teal;
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+.parrafoparallax a {
+  color: white;
+  font-weight: 800;
+  padding: 10px 30px;
+  margin: 0;
+  text-decoration: none;
+}
+.biografia {
+  display: inline-flex;
+}
+.biografia p {
+  color: whitesmoke;
+  /* Coloca el maximo de ancho a un elemento e impide que el avlor de width sea mas largo que el 
+  valor que especificamos en el max-width*/
+  max-width: 50%;
+  margin: 0;
+  /* Es una propiedad flexible, alinea al centro el elemnto dentro del contenedor */
+  align-self: center;
+  padding-left: 50px;
+  /* Establece la altura entre lineas de parrafo */
+  line-height: 23px;
+  text-align: justify;
+}
+/* Se puede seleccionas dos clases y separaralas por una coma.  */
+.titulobiografia,
+.titulobiografia2 {
+  display: inline-flex;
+  /* tamaño de letra */
+  font-size: 30px;
+  /* grosor del texto */
+  font-weight: 700;
+}
+.biografia img {
+  /* que solo utilice en 50 5 restante */
+  max-width: 50%;
+  /* altura automatica */
+  height: auto;
+  padding: 0px 25px;
+}
+.contentlogros{
+  /* Esta propiedad da un espaciado entre letras */
+  letter-spacing: 3px;
+  /* Espaciado entre lineas del parrafo */
+  line-height: 2px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contentlogros h2{
+ color: #ffffff;
+ /* Grosor tipo negrita al texto */
+ font-weight: 900;
+ text-align: center;
+ margin: 100px 0px;
+ font-size: 40px;
+ font-family: "Open Sans", sans-serif;
+}
+.container{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  /* el justify-..: center alinea los elementos horizontalmente, solo se usa cuando agregamos
+  la propiedad felex */
+  justify-content: center;
+  margin: auto;
+}
+.container .card{
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  /* Cuando se desborda el contenido, el overflow:hidden hidden lo oculta o corta el espacio que se sale del
+  contenedor  */
+  /* overflow: hidden; */
+}
+/*Border radius da un redondeado a las esquinas del borde, los datos de abajo son para la 
+compatilidad con varioss navegadores, ej "0px 0px 0px 0px " el primer valor es la esquina 
+superior izquierda, el que sigue la superior derecha, siguiente la inferior derecha y el utilimo la 
+inferior izquierda*/
+.container .card img{
+  padding: 10px;
+  width: 350px;
+  height: 350px;
+  border-radius: 175px 175px 0px 0px;
+  -webkit-border-radius: 175px 175px 0px 0px;
+  -moz-border-radius: 175px 175px 0px 0px;
+  -ms-border-radius: 175px 175px 0px 0px;
+  -o-border-radius: 175px 175px 0px 0px;
+}
+.container .card h4{
+  font-weight: 600;
+  color: #ffe4c4;
+}
+.container .card p{
+  font-size: 16px;
+  font-weight: 300;
+  color: bisque;
+}
+.container .card a{
+  text-decoration: none;
+  color: cornflowerblue;
+  font-weight: 500;
+}
+.container .card:hover{
+  transition:cubic-bezier(1, 0, 0, 1);
+  -webkit-transition:cubic-bezier(1, 0, 0, 1);
+  -moz-transition:cubic-bezier(1, 0, 0, 1);
+  -ms-transition:cubic-bezier(1, 0, 0, 1);
+  -o-transition:cubic-bezier(1, 0, 0, 1);
+  transform:rotate(y);
+  -webkit-transform:rotate(y);
+  -moz-transform:rotate(y);
+  -ms-transform:rotate(y);
+  -o-transform:rotate(y);
+}
+

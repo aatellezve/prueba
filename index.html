@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messi</title>
+    <link rel="shortcut icon" href="imagenes/icono.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--Semantica html: Se refiere a la definicion que se le otorga a alo elementos o etiquetas de la pagina
+    Buenas practicas (SEO - posición de google) -->
+
+    <header>
+      <!--Define el encabezado de la pagina-->
+      <!--La etiqueta div define una division o seccion en un documento html, se utiliza como contenedor de 
+        elementos html , que luego le puede dar propiedades css o manipular con javascrip.-->
+      <!-- El atributo Class nos ayuda a acceder y seleccionar elementos especificos, se le puede dar una 
+        o mas clases al elemento -->
+      <div>
+        <img class="logoimagen" src="imagenes/logo2.png" alt="logo1" />
+      </div>
+
+      <nav>
+        <!--Nav se refiere al menu de la pagina-->
+        <!-- <ol> type="A" "Es una lista ordenada, enumera los elementos, esn type se define si se enumera en 
+            numero roamnos, letras etc "
+            <li>gato</li>
+            <li>perro</li>
+            <li>perro</li>
+            <li>perro</li>
+        </ol> -->
+        <!-- <dl>
+            <dt>html</dt>
+            <dd>el html es un lenguaje de marcado de h</dd>
+        </dl>-->
+        <!--"lista definitiva"-->
+
+        <ul class="barradenavegacion">
+          <!--lista no ordenada, la etiqueta <a> va dentro junto al texto y se usa para crear hipervinculos-->
+          <li class="navegacion"><a href="">BIO</a></li>
+          <li class="navegacion"><a href="">INFO</a></li>
+          <li class="navegacion"><a href="">LOGROS</a></li>
+          <li class="navegacion"><a href="">VIDEOS</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Es una etiquta de semantica, que reprenta una seccion de mi pagina-->
+    <section>
+      <div class="parallax">
+        <div class="tituloparallax">
+          <h2>Lionel Messi</h2>
+
+          <!-- Span en un contenedor en linea, se utiliza para dar estilos ha algo especifico, como una plabra
+            en un parrafo o en esta ocasion se añade un boton en una imagen-->
+          <!-- sisrve para dar estilo al texto o agrupar elementos en linea -->
+          <span class="parrafoparallax">
+            <!-- a es una etiqueta que nos pone un hipervinculo, href colocamos la ubicacion( otra pagina web,
+                secciones en nuestra pagina, etc) y despues el nombre del boton, -->
+            <a href="https://messi.com/">Get Now</a>
+          </span>
+        </div>
+      </div>
+    </section>
+    <!-- seccion de la info del artista -->
+    <section>
+      <article>
+        <div class="biografia">
+          <p>
+            <!-- contenedor en linea -->
+            <span class="titulobiografia"> ¿Quien es Lionel Messi? </span>
+            <br />
+            <br />
+            <br />
+            (Lionel Andrés Messi; Rosario, Santa Fe, 1987) Futbolista argentino.
+            Poseedor de una habilidad técnica excepcional, una endiablada
+            velocidad y una inventiva inagotable, desde que llegó de la mano de
+            sus padres al F.C. Barcelona, con 13 años de edad, realizó una
+            carrera vertiginosa por las diferentes categorías hasta el primer
+            equipo, en el que debutó con apenas 16 años en un partido amistoso
+            ante el Oporto. En 2004, con 17 años, Leo Messi jugó su primer
+            encuentro oficial de la Liga española. Con 18 años le llegó su
+            consagración internacional: formó parte de la selección argentina,
+            campeona en el Mundial Juvenil Sub-20 de Holanda, disputado en 2005.
+
+            <br />
+            <br />
+            <span class="titulobiografia2"> Biografia </span>
+            <br />
+            <br />
+
+            Conocido como Leo o Pulga, su inmensa calidad ya apuntaba cuando
+            tenía cinco años y jugaba en el club de barrio de su ciudad natal
+            dirigido por su padre, un empleado de la industria metalúrgica, y se
+            reafirmó cuando, a partir de sus siete años, comenzó a jugar en las
+            divisiones inferiores del Newell's Old Boys de Rosario. A los 10
+            años, a punto de dar el salto al club River Plate de Buenos Aires,
+            se le detectó un retraso en el desarrollo óseo causado por un bajo
+            nivel de hormonas del crecimiento; el tratamiento médico era muy
+            costoso, los clubes no quisieron afrontarlo y su padre, que no
+            disponía de los recursos económicos necesarios, decidió entonces
+            emigrar a Barcelona con su familia, donde se le había presentado una
+            posibilidad laboral. En septiembre de 2000, Leo Messi realizaba una
+            prueba en el F.C. Barcelona; el técnico Carles Rexach quedó
+            maravillado con su talento futbolístico y, firmando en efecto un
+            contrato en una servilleta de papel, como cuenta la anécdota, lo
+            incorporó al club, que se hizo cargo del tratamiento del chico.
+            Messi tenía entonces trece años y medía 1,40.
+          </p>
+          <!-- de ahora en adelante las imagenes de deben agregar asi "./imagenes" 
+            el ./ nos muetra las carpetas que estan dentro del proyecto
+            el ../ nos muestra las carpetas que se ven antes de entrar al proyecto-->
+          <img src="./imagenes/imagen1.jpg" alt="imagen1" />
+        </div>
+      </article>
+    </section>
+
+    <section class="contentlogros">
+      <h2>LOGROS</h2>
+
+      <!-- Primer container -->
+      <div class="container">
+        <!-- primer carta (items. hijos) -->
+        <div class="card">
+          <img src="./imagenes/balon1.jpg" alt="balon1" />
+          <h4>Primer balon de oro</h4>
+          <p>Año 2009</p>
+          <a
+            href="https://www.marca.com/reportajes/2009/11/messi_balon_de_oro_2009/seccion_00.html"
+            >Leer más</a>
+          <!-- segunda carta -->
+        </div>
+        <div class="card">
+          <img src="./imagenes/balon2.jpg" alt="balon2" />
+          <h4>Segundo balon de oro</h4>
+          <p>Año 2010</p>
+          <a
+            href="https://www.marca.com/futbol/2018/04/24/5adf547aca4741c4088b462b.html"
+            >Leer más</a>
+        </div>
+        <!-- Tercera carta -->
+        <div class="card">
+          <img src="./imagenes/balon3.jpg" alt="balon3" />
+          <h4>Tercer balón de oro</h4>
+          <p>Año 2011</p>
+          <a href="https://es.wikipedia.org/wiki/FIFA_Bal%C3%B3n_de_Oro_2011"
+            >Leer más</a>
+        </div>
+      </div>
+      <!-- segundo container -->
+      <div class="container">    
+        <!-- cuarta carta -->
+        <div class="card">
+          <img src="./imagenes/balon4.jpg" alt="balon4" />
+          <h4>Cuarto balon de oro</h4>
+          <p>Año 2012</p>
+          <a href="https://es.wikipedia.org/wiki/FIFA_Bal%C3%B3n_de_Oro_2012"
+            >Leer más</a >
+        </div>
+        <!-- quinta carta -->
+        <div class="card">
+          <img src="./imagenes/balon5.jpg" alt="balon5" />
+          <h4>Quinto balon de oro</h4>
+          <p>Año 2015</p>
+          <a href="https://es.wikipedia.org/wiki/FIFA_Bal%C3%B3n_de_Oro_2015"
+            >Leer más</a>
+        </div>
+        <!-- sexta carta -->
+        <div class="card">
+          <img src="./imagenes/balon6.jpg" alt="balon6">
+          <h4>Sexto balon de oro</h4>
+          <p>Año 2019</p>
+          <a href="https://es.wikipedia.org/wiki/Bal%C3%B3n_de_Oro_2019">Leer más</a>
+      </div>
+    </div>
+    </section>
+  </body>
+</html>
